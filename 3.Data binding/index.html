@@ -1,0 +1,15 @@
+<div id="app">
+    <a :href="url">{{url}}</a>
+    <h1 :data="dynamicId">{{dynamicId}}</h1>
+</div>
+
+
+<script>
+    new Vue({
+        el:app,
+        data:{
+            dynamicId: 30,
+            url:'https://gmail.com',
+        }
+    });
+</script>
