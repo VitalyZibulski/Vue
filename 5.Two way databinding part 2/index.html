@@ -1,0 +1,46 @@
+
+<div class="container">
+
+    <div id="app">
+        <form action="">
+            <div class="col-sm-6">
+                <input v-model="options" type="text" class="form-control">
+            </div>
+
+            <div class="form-check">
+                <input v-model="options" class="form-check-input" type="checkbox" value="option-1" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    checkbox1
+                </label>
+            </div>
+            <fieldset class="form-group">
+                <div class="form-check">
+                    <input v-model="options"  class="form-check-input" type="checkbox" value="option-2" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        checkbox2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input v-model="options"  class="form-check-input" type="checkbox" value="option-3" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">
+                        checkbox3
+                    </label>
+                </div>
+            </fieldset>
+            <p>You selected {{options.join(', ')}}</p>
+        </form>
+
+        {{message}}
+    </div>
+
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            options:[],
+            message:''
+        }
+    });
+</script>
