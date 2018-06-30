@@ -1,0 +1,63 @@
+<div id="app">
+    {{message}}
+    {{number + 10}}
+</div>
+
+<script>
+    let vm = new Vue({
+        el:app,
+        data:{
+            message:'vue is cool',
+            number:10
+        }
+    });
+</script>
+------------------------------------
+console
+
+vm.message = vue is very cool
+
+------------------------------------
+
+<div id="app">
+    {{message}}
+    {{number + 10}}
+    {{isActive ? 'isActive' : 'isNotActive'}}
+</div>
+
+<script>
+    new Vue({
+    el:app,
+    data:{
+        message:'vue is cool',
+        number:10,
+        isActive:true
+    }
+    });
+</script>
+
+------------------------------------
+console
+
+vm.isActive = false
+
+------------------------------------
+
+<div id="app">
+
+    {{message}}
+    {{number + 10}}
+    {{isActive ? 'isActive' : 'isNotActive'}}
+    {{message.split('').reverse('').join('')}}
+</div>
+
+<script>
+    new Vue({
+        el:app,
+        data:{
+            message:'vue is cool',
+            number:10,
+            isActive:true
+        }
+    });
+</script>
