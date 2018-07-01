@@ -1,0 +1,18 @@
+<div id="app">
+    <h1>Antony {{isActive === 'active' ? 'is Active' : 'not active'}}</h1>
+</div>
+
+
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            isActive:'not active'
+        },
+        watch:{
+            isActive: function(newValue){
+                console.log('Sending an email' + newValue)
+            }
+        }
+    });
+</script>
