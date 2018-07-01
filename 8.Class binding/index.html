@@ -1,0 +1,26 @@
+<div id="app">
+    <h1 class="static" :class="{active : isActive, 'notActive' : hasError}">{{name}}</h1>
+
+    <h1 :class="[isActive ? 'active' : 'notActive']">{{name}}</h1>
+</div>
+
+
+<script>
+    let vm = new Vue({
+        el:app,
+        data:{
+            isActive:false,
+            hasError:true,
+            name:'Antony'
+        }
+    });
+</script>
+
+<style>
+    .active{
+        color:green;
+    }
+    .notActive{
+        color:red;
+    }
+</style>

@@ -1,0 +1,36 @@
+<div id="app">
+    <button @click="increasefont">Increase</button>
+    <button @click="decreasefont">Increase</button>
+    <div :style="{color:'red', fontSize:fontSize + 'px'}">{{ message }}</div>
+</div>
+
+
+<script>
+    let vm = new Vue({
+        el:app,
+        data:{
+            message:'hello',
+            fontSize:12,
+        },
+        methods:{
+            increasefont(){
+                this.fontSize++;
+            },
+            decreasefont(){
+                this.fontSize--;
+            },
+
+        }
+    });
+</script>
+
+
+<style>
+    .active{
+        color:green;
+    }
+
+    .notActive{
+        color:red;
+    }
+</style>
