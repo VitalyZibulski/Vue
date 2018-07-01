@@ -1,0 +1,17 @@
+<div id="app">
+    <h1 v-if="isActive">{{name}}</h1>
+    <h1 v-else-if="name === 'Antony'">Hey Antony</h1>
+    <h1 v-else>NO USER</h1>
+</div>
+
+<script>
+    let vm = new Vue({
+        el:app,
+        data:{
+            isActive: false,
+            name:'Antony',
+        }
+    });
+</script>
+
+
