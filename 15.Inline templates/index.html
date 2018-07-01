@@ -1,0 +1,28 @@
+<div id="app">
+    <posts inline-template>
+        <h1 @click="display">Hello1111</h1>
+    </posts>
+</div>
+
+
+<script>
+    Vue.component('posts', {
+        data(){
+            return {
+
+            }
+        },
+
+        methods: {
+            display(){
+                console.log('11111111111')
+            }
+        }
+    });
+
+    let vm = new Vue({
+        el:'#app',
+
+    });
+
+</script>
