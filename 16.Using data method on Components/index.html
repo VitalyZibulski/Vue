@@ -1,0 +1,28 @@
+<div id="app">
+    <posts :data="34"></posts>
+</div>
+
+<script>
+    Vue.component('posts', {
+        props:['data'],
+        template:`
+    	<h1 @click="display">{{data}}</h1>
+    `,
+        data(){
+            return {
+                message:'Hello Antony'
+            }
+        },
+
+        methods: {
+            display(){
+                console.log('11111111111')
+            }
+        }
+    });
+
+    let vm = new Vue({
+        el:'#app',
+
+    });
+</script>
