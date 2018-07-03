@@ -33,8 +33,9 @@
             }
         },
         created(){
-            axios.get('https://jsonplaceholder.typicode.com/posts').then(posts => {
-                this.posts = posts.data
+            axios.get('https://jsonplaceholder.typicode.com/posts').then(data => {
+                console.log(data)
+                this.posts = data.data
             })
         }
     }
